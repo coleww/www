@@ -1,0 +1,34 @@
+{
+  "name": "drone-e-o-synth",
+  "description": "a lil web audio instrument for droning",
+  "version": "1.0.1",
+  "main": "index.js",
+  "scripts": {
+    "build": "browserify www/demo.js -o www/bundle.js",
+    "watch": "watchify www/demo.js -o www/bundle.js --debug --verbose"
+  },
+  "devDependencies": {
+    "browserify": "*",
+    "watchify": "*",
+    "range-fit": "^0.1.1"
+  },
+  "author": "Cole Willsea <coleww@gmail.com> (http://colewillsea.com/)",
+  "license": "MIT",
+  "dependencies": {
+    "make-distortion-curve": "^1.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/coleww/shake-it-off.git"
+  },
+  "keywords": [
+    "audio",
+    "synth",
+    "webaudio",
+    "drone"
+  ],
+  "bugs": {
+    "url": "https://github.com/coleww/shake-it-off/issues"
+  },
+  "homepage": "https://github.com/coleww/shake-it-off"
+}

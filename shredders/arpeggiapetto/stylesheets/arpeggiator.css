@@ -1,0 +1,45 @@
+.key {
+  border: 1px solid black;
+  border-radius:5px;
+  padding: 1px;
+  margin: 5px;
+  display: inline-block;
+  text-align:center;
+  background-color: lightgreen;
+  color: red;
+}
+
+.charKey {width: 25px;}
+.dblKey {width: 85px;}
+.smallKey {width: 25px;}
+.lrgKey {width: 100px;}
+.msgSpace {width: 150px;}
+.current {background-color: white !important;}
+.active {background-color: green; color: red;}
+.marker {background-color: lightgray; color: black;}
+.control {background-color: lightgreen; color: red;}
+
+.container {
+  width: 780px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: lightblue;
+  padding: 10px;
+}
+
+.default {
+  padding: 5px;
+  margin: 5px;
+  float: left;
+  background-color: gray;
+  border-radius: 5px;
+}
+
+.clear {
+  clear: both;
+}
+
+.hidden {
+  display: none;
+}
+

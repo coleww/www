@@ -1,0 +1,28 @@
+{
+  "name": "shreddit-hardcore",
+  "version": "0.1.0",
+  "description": "A web audio noise toy",
+  "main": "server.js",
+  "scripts": {
+    "test": "test.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/coleww/shreddit-hardcore.git"
+  },
+  "keywords": [
+    "noise",
+    "webaudio",
+    "sequencer"
+  ],
+  "author": "Cole Willsea <coleww@gmail.com> (http://colewillsea.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/coleww/shreddit-hardcore/issues"
+  },
+  "homepage": "https://github.com/coleww/shreddit-hardcore",
+  "devDependencies": {
+    "gulp": "^3.8.8"
+  }
+}

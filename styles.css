@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: url(bg.gif) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin: 0;
+  text-align: center;
+}
+
+.block {
+  background-color: white;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid black;
+  width: 420px;
+  margin: 50px auto;
+}
+
+.links a, .projects a {
+  text-decoration: none
+}
+
+.link-name {
+  text-decoration: underline;
+}
+
+.tile-list {
+  list-style: none;
+  padding: 0;
+}
+
+.tile-link {
+  margin: 10px 0;
+}
+
+@media only screen and (max-width: 500px) {
+  .block {
+    width: 250px;
+  }
+}

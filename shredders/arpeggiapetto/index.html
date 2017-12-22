@@ -1,0 +1,98 @@
+<html>
+  <head>
+    <title>SHREDDIT | ARPEGGIATE</title>
+    <link href="./stylesheets/arpeggiator.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div class="container">
+        <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-26036675-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+        <span class="key dblKey" id="space">space</span>
+        <span class="key lrgKey marker" id="msgSpace">msgssssss and dataaaaaassss</span>
+      <div class="grid default">
+
+        <span class="key charKey" id="one">1</span>
+        <span class="key charKey" id="two">2</span>
+        <span class="key charKey" id="three">3</span>
+        <span class="key charKey" id="four">4</span>
+        <span class="key charKey" id="five">5</span>
+        <span class="key charKey" id="six">6</span>
+        <span class="key charKey" id="seven">7</span>
+        <span class="key charKey" id="eight">8</span>
+        <span class="key charKey" id="nine">9</span>
+        <span class="key charKey" id="zero">0</span>
+        <span class="key charKey" id="minus">-</span>
+        <span class="key charKey" id="equals">=</span>
+        <br />
+
+        <span class="key charKey" id="q">q</span>
+        <span class="key charKey" id="w">w</span>
+        <span class="key charKey" id="e">e</span>
+        <span class="key charKey" id="r">r</span>
+        <span class="key charKey" id="t">t</span>
+        <span class="key charKey" id="y">y</span>
+        <span class="key charKey" id="u">u</span>
+        <span class="key charKey" id="i">i</span>
+        <span class="key charKey" id="o">o</span>
+        <span class="key charKey" id="p">p</span>
+        <span class="key charKey" id="openBracket">[</span>
+        <span class="key charKey" id="closeBracket">]</span>
+        <span class="key charKey" id="backSlash">\</span>
+        <br />
+        <span class="key charKey" id="a">a</span>
+        <span class="key charKey" id="s">s</span>
+        <span class="key charKey" id="d">d</span>
+        <span class="key charKey" id="f">f</span>
+        <span class="key charKey" id="g">g</span>
+        <span class="key charKey" id="h">h</span>
+        <span class="key charKey" id="j">j</span>
+        <span class="key charKey" id="k">k</span>
+        <span class="key charKey" id="l">l</span>
+        <span class="key charKey" id="semicolon">;</span>
+        <span class="key charKey" id="apostrophe">'</span>
+        <span class="key charKey" id="up">/\</span>
+        <br />
+
+        <span class="key charKey" id="z">z</span>
+        <span class="key charKey" id="x">x</span>
+        <span class="key charKey" id="c">c</span>
+        <span class="key charKey" id="v">v</span>
+        <span class="key charKey" id="b">b</span>
+        <span class="key charKey" id="n">n</span>
+        <span class="key charKey" id="m">m</span>
+        <span class="key charKey" id="comma">,</span>
+        <span class="key charKey" id="period">.</span>
+        <span class="key charKey" id="slash">/</span>
+        <span class="key charKey" id="left">&lt;</span>
+        <span class="key charKey" id="down">\/</span>
+        <span class="key charKey" id="right">&gt;</span>
+
+      </div>
+
+        <br />
+      <div class="clear"></div>
+    </div>
+
+    <script src="vendor/keymaster.js"></script>
+    <script src="vendor/wad.js"></script>
+
+    <script src="javascripts/musicTheory.js"></script>
+    <script src="javascripts/newCtrlParams.js"></script>
+    <script src="javascripts/newKeyCtrl.js"></script>
+    <script src="javascripts/synth.js"></script>
+    <script src="javascripts/arpSequencer.js"></script>
+
+    <script>
+      var seq = new Arp.Sequencer();
+      seq.startSeq();
+    </script>
+  </body>
+</html>

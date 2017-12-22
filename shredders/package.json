@@ -1,0 +1,19 @@
+{
+  "name": "shredders",
+  "version": "1.0.0",
+  "description": "SHREDDERS ------------------",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "cd .. && rm -rf colewillsea.com/shredders && cp -r shredders colewillsea.com/shredders && cd colewillsea.com && rm -rf shredders/.git  && surge"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coleww/shreddit-hard-co.re.git"
+  },
+  "author": "Cole Willsea <coleww@gmail.com> (http://colewillsea.com/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/coleww/shreddit-hard-co.re/issues"
+  },
+  "homepage": "https://github.com/coleww/shreddit-hard-co.re#readme"
+}

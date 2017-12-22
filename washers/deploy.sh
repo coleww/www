@@ -1,0 +1,1 @@
+cd .. && rm -rf colewillsea.com/washers && cp -r washers colewillsea.com/washers && cd colewillsea.com && rm -rf washers/.git && surge

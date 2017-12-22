@@ -1,0 +1,164 @@
+<head>
+  <title>
+    jQU3Ry cAM3rA
+  </title>
+
+  <!-- OG META TAGS GO HERE -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-26036675-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  <style>
+  .pixel {
+  width: 3%;
+  height: 3%;
+  display: inline-block;
+}
+
+.hide {
+  display: none;
+}
+    * {
+      box-sizing: border-box
+    }
+
+    body {
+      background-color: black;
+    }
+
+    .headline {
+      font-size: 15px;
+    }
+
+    .super-center {
+      margin: auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .layover {
+      margin-left: auto;
+      margin-right: auto;
+      overflow: scroll;
+      overflow-x: auto;
+      overflow-y: auto;
+      padding: 10%;
+      padding-top: 5%;
+      padding-bottom: 5%;
+      text-align: justify;
+    }
+    .cammy {
+      /*width: 100% !important;*/
+    }
+
+    .pic {
+
+      /*height: 200% !important;*/
+    }
+
+    p {
+      color: white;
+      font-weight: bold;
+      font-family: 'SOME GOOGLE FONT OR WHATEVER';
+      font-size: 19px;
+      letter-spacing: 5px;
+
+      line-height: 5px;
+      /* FIX DIS NOT RESPONSIV/\ /\ */
+    }
+
+  </style>
+</head>
+<body>
+
+
+
+  <br />
+  <center><strong><a href="http://coleww.github.io/washers">THE IMAGINARY, </a><button id="picturebtn">symbolic, and </button><a href="https://github.com/coleww/washers" target="_blank">real</a></strong></center>
+    <center>
+    <canvas class='hide' id="hiddencanvas"></canvas>
+    <video class='hide' id='videoElement'></video>
+  <iframe class="super-center" src="//player.vimeo.com/video/5212904?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1&amp;loop=1" width="500" height="334" frameborder="0"></iframe>
+  <div class="super-center layover cammy" id="scrollyBoy">
+    <center>
+
+    <div class='cammy pic' id="pixelContainer"></div>
+  </center>
+  </div>
+
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+  <script>
+    $(function(){
+      var $content = $(".layover");
+
+      gotIt = false;
+
+
+      var v = document.querySelector("#videoElement");
+
+      navigator.getUserMedia = navigator.getUserMedia ||
+                               navigator.webkitGetUserMedia ||
+                               navigator.mozGetUserMedia ||
+                               navigator.msGetUserMedia ||
+                               navigator.oGetUserMedia;
+
+      if (navigator.getUserMedia) {
+        navigator.getUserMedia({video: true}, function(stream) {
+          gotIt = true;
+          v.src = window.URL.createObjectURL(stream);
+        },
+        function(errors) {
+          console.log(errors, "wat");
+        });
+      }
+
+      $(function(){
+        var hiddenCanvas = document.getElementById("hiddencanvas");
+        var hiddenContext = hiddenCanvas.getContext("2d");
+        var w = hiddenCanvas.width;
+        var h = hiddenCanvas.height;
+
+        var $scrolly = $("#scrollyBoy");
+
+        window.setInterval(function(){
+          var loc = $scrolly.scrollTop()
+          console.log(loc)
+          $scrolly.scrollTop(loc +  ~~(Math.random() * 100) - 40)
+        }, 250)
+
+
+        window.setInterval(function(){
+          hiddenContext.drawImage(v, 0,0, w, h);
+          var pixeldata = hiddenContext.getImageData(0, 0, w, h).data;
+
+          if(!gotIt){
+            $("#pixelContainer").empty();
+          }
+
+          for(var i = 0; i < pixeldata.length; i+=20){
+            var r = pixeldata[i];
+            var g = pixeldata[i + 1];
+            var b = pixeldata[i + 2];
+            var color = "rgba(" + r + "," + g + "," + b + ", 0.75)";
+            var pixel = $("<div class='pixel'></div>");
+            pixel.addClass("pixel").css("background-color", color);
+            $("#pixelContainer").append(pixel);
+          }
+        }, 5000);
+      });
+    })
+  </script>
+</body>
